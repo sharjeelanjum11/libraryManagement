@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +40,7 @@ namespace libraryManagement
         int count;
         private void searchbtnroll_Click(object sender, EventArgs e)
         {
-                if(txtrollnosearch.Text!="")
+                if(!string.IsNullOrEmpty(txtrollnosearch.Text))
             {
                 String eid = txtrollnosearch.Text;
                 SqlConnection con = new SqlConnection();
@@ -89,7 +89,7 @@ namespace libraryManagement
 
         private void issuebtn_Click(object sender, EventArgs e)
         {
-            if(txtname.Text!="")
+            if(!string.IsNullOrEmpty(txtname.Text))
             {
                 if(comboBoxbook.SelectedIndex!=-1 && count <= 2)
                 {

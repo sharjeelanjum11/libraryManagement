@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +38,7 @@ namespace libraryManagement
 
         private void textRollnoSerach_TextChanged(object sender, EventArgs e)
         {
-            if(textRollnoSerach.Text!="")
+            if(!string.IsNullOrEmpty(textRollnoSerach.Text))
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=SHARJEELANJUM;database=libraryz;Integrated Security=True";
