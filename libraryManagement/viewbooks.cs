@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,7 +76,7 @@ namespace libraryManagement
 
         private void txtBookName_TextChanged(object sender, EventArgs e)
         {
-            if (txtBookName.Text != "")
+            if (!string.IsNullOrEmpty(txtBookName.Text))
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=SHARJEELANJUM;database=libraryz;Integrated Security=True";
